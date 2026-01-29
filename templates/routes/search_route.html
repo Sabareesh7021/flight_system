@@ -1,0 +1,23 @@
+<h2>Find Last Reachable Airport</h2>
+<a href="{% url 'home' %}">🏠 Home</a>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    <p>
+        {{ form.start_airport.label_tag }}<br>
+        {{ form.start_airport }}
+    </p>
+    <p>
+        {{ form.direction.label_tag }}<br>
+        {{ form.direction }}
+    </p>
+    <button type="submit">Search</button>
+</form>
+
+{% if last_node %}
+<hr>
+<h3>
+    Last Reachable Airport:
+    <strong>{{ last_node.airport_code }}</strong>
+</h3>
+{% endif %}

@@ -1,0 +1,7 @@
+staticfiles/
+routes/migrations/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env

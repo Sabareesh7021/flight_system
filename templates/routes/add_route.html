@@ -1,0 +1,25 @@
+<h2>Add Airport Route</h2>
+<a href="{% url 'home' %}">🏠 Home</a>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    <p>
+        {{ form.airport_code.label_tag }}<br>
+        {{ form.airport_code }}
+    </p>
+    <p>
+        {{ form.distance.label_tag }}<br>
+        {{ form.distance }}
+    </p>
+    <p>
+        {{ form.connected_airport.label_tag }}<br>
+        {{ form.connected_airport }}
+        <small>(Select parent airport)</small>
+    </p>
+    <p>
+        {{ form.position.label_tag }}<br>
+        {{ form.position }}
+        <small>(Left or Right)</small>
+    </p>
+    <button type="submit">Save</button>
+</form>

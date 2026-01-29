@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flight Routes System</title>
+</head>
+
+<body>
+    <h1>Flight Routes System</h1>
+    <ul>
+        <li>
+            <a href="{% url 'add-route' %}">
+                ➕ Add Airport Route
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'search-route' %}">
+                🔍 Find Last Reachable Airport
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'results' %}">
+                📊 View Duration Results
+            </a>
+        </li>
+    </ul>
+</body>
+
+</html>

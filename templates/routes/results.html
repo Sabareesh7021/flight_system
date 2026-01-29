@@ -1,0 +1,34 @@
+<h2>Airport Route Duration Summary</h2>
+
+<a href="{% url 'home' %}">🏠 Home</a>
+<hr>
+
+<h3>🚀 Longest Duration Route</h3>
+<p>
+    <strong>From:</strong>
+    {{ longest.connected_airport.airport_code|default_if_none:"START" }}
+</p>
+<p>
+    <strong>To:</strong>
+    {{ longest.airport_code }}
+</p>
+<p>
+    <strong>Duration:</strong>
+    {{ longest.distance }}
+</p>
+
+<hr>
+
+<h3>⚡ Shortest Duration Route</h3>
+<p>
+    <strong>From:</strong>
+    {{ shortest.connected_airport.airport_code|default_if_none:"START" }}
+</p>
+<p>
+    <strong>To:</strong>
+    {{ shortest.airport_code }}
+</p>
+<p>
+    <strong>Duration:</strong>
+    {{ shortest.distance }}
+</p>
